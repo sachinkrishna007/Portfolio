@@ -1,9 +1,12 @@
 import meter1 from "../assets/img/react.png";
 import node from "../assets/img/node.png";
-import mongo from "../assets/img/nongo.png";
+import mongo from "../assets/img/MongoDB-Logo.jpg";
 import redux from "../assets/img/redux.png";
 import html from "../assets/img/html.png";
 import css from "../assets/img/css.jpeg";
+import js from "../assets/img/jslog.png";
+import sql from "../assets/img/postgre.png";
+import expr from "../assets/img/exp.jpg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import arrow1 from "../assets/img/arrow1.svg";
@@ -55,17 +58,28 @@ export const Skills = () => {
 
                   <br></br>
                 </div>
-                <div className="item">
-                  <img src={redux} alt="Image" />
-                </div>
+
                 <div className="item">
                   <img src={mongo} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={expr} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={js} alt="Image" />
                 </div>
                 <div className="item">
                   <img src={html} alt="Image" />
                 </div>
                 <div className="item">
                   <img src={css} alt="Image" />
+                </div>
+
+                <div className="item">
+                  <img src={sql} alt="Image" />
+                </div>
+                <div className="item">
+                  <img src={redux} alt="Image" />
                 </div>
               </Carousel>
             </div>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
+import axios from "axios";
+
 import TrackVisibility from "react-on-screen";
 
 export const Contact = () => {
@@ -26,20 +28,15 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch(
-      "https://main.d10gfsdxvmqya5.amplifyapp.com//contact",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      }
-    );
+     let response = await axios.post(
+       "https://formspree.io/f/mjvnwqop",
+       formDetails
+     );
+      alert("Message sent successfully!");
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
+    if (response.status == 200) {
       setStatus({ succes: true, message: "Message sent successfully" });
     } else {
       setStatus({
@@ -90,7 +87,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.lasttName}
+                          value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
                             onFormUpdate("lastName", e.target.value)

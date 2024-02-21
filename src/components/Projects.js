@@ -6,6 +6,10 @@ import projImg2 from "../assets/img/Screenshot (83).png";
 import projImg3 from "../assets/img/Screenshot (84).png";
 import projImg4 from "../assets/img/Screenshot (57).png";
 import projImg5 from "../assets/img/Screenshot (87).png";
+import wayfarer2 from "../assets/img/Screenshot (88).png";
+import wayfarer3 from "../assets/img/Screenshot (89).png";
+import home2 from "../assets/img/Screenshot (91).png";
+import home3 from "../assets/img/Screenshot (92).png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -16,7 +20,9 @@ export const Projects = () => {
       title: "Wayfarer",
       description: "Travel guide Booking Application",
       imgUrl: projImg1,
-
+      imgUrl2: wayfarer2,
+      imgUrl3: wayfarer3,
+      git: "https://github.com/sachinkrishna007/Wayfarer",
       about:
         "Developed a comprehensive travel guide booking website using the MERN stack. The platform empowers users to discover destinations, seamlessly book travel services and elevate their travel experiences through a range of features.",
       livelink: "https://sachinkrishna.me",
@@ -26,8 +32,13 @@ export const Projects = () => {
       title: "Home Haven",
       description: "An E-Commerce Store",
       imgUrl: projImg2,
-      about: "Home Haven - An E-Commerce Store.",
-      livelink: "https://sachinkrishna.me/",
+      git: "https://github.com/sachinkrishna007/HomeHaven--Ecommerce-Website",
+      about:
+        "Developed a comprehensive e-commerce platform specializing in home decor items, featuring an extensive  range of functionalities catering to both users and administrators..",
+      livelink: "https://home.sachinkrishna.me/",
+      imgUrl2: home2,
+      imgUrl3: home3,
+      tech: "Express, React, MongoDB, AWS, Razorpay, Multer, JavaScript, Node.js, NGINX,Twilio",
     },
   ];
 
@@ -37,16 +48,28 @@ export const Projects = () => {
       description:
         "Application that enables users to create secure and unique password",
       imgUrl: projImg5,
+      about:
+        "Developed a Password Generator application that enables users to create secure and unique passwords customized to their specific criteria.",
+      tech: "React, Express , MongoDB , Node",
+      git: "https://github.com/sachinkrishna007/Password-Generator",
     },
     {
       title: "Netflix Clone",
-      description: "",
+      description: "Cloned netflix",
       imgUrl: projImg4,
+      tech: "React,Axios",
+      git: "https://github.com/sachinkrishna007/Netflix-Clone",
+      about:
+        "Cloned Netflix website using React , Used TMDB API for dynamic content fetching and Axios for seamless API calls.",
     },
     {
       title: "Olx Clone",
-      description: "",
+      description: "Cloned Olx",
+      git: "https://github.com/sachinkrishna007/OLX_CLONE",
       imgUrl: projImg3,
+      tech: "React, Firebase",
+      about:
+        "Developed a web application that replicates the functionality of the popular online classifieds platform OLX  and Firebase for the backend..",
     },
   ];
 
@@ -77,7 +100,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="second">Mini Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third"> Upcoming</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -103,13 +126,7 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <h6>No contents to show here</h6>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

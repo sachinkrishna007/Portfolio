@@ -11,6 +11,9 @@ export const ProjectCard = ({
   about,
   livelink,
   tech,
+  imgUrl2,
+  imgUrl3,
+  git,
 }) => {
   const [modalShow, setModalShow] = useState(false);
 
@@ -44,7 +47,20 @@ export const ProjectCard = ({
                     alt="First slide"
                   />
                 </Carousel.Item>
-                {/* Add additional Carousel.Items for additional images */}
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={imgUrl2 ?? imgUrl}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={imgUrl3 ?? imgUrl}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
               </Carousel>
               <br />
               <br />
@@ -55,25 +71,29 @@ export const ProjectCard = ({
               <br />
               <br />
               <h5 style={{ color: "black", textDecoration: "underline" }}>
-                Technology Used
-              </h5>{" "}
+                Technologies Used
+              </h5>
               <p style={{ color: "black" }}>{tech}</p>
               <br />
-              <a
-                href={livelink}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "black", paddingTop: "30px" }}
-              >
-                Live Link
-              </a>
+              {livelink ? (
+                <a
+                  href={livelink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "blue", paddingTop: "30px" }}
+                >
+                  Live Link
+                </a>
+              ) : (
+                ""
+              )}
               <br />
               <br />
               <a
-                href={livelink}
+                href={git}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "black", paddingTop: "30px" }}
+                style={{ color: "blue", paddingTop: "30px" }}
               >
                 Git Hub
               </a>
